@@ -1,0 +1,59 @@
+print("Rock, Paper, Scissors!")
+
+print("Rock = R, Paper = P, Scissors = S")
+print()
+print("1st to 3 wins")
+player1Score = 0
+player2Score = 0
+while True:
+  player1 = input("What is your move player 1? R, P, or S?: ")
+  player2 = input("What is your move player 2? R, P, or S?: ")
+  
+  if player1 == "S" or player1 == "s":
+    if player2 == "S" or player2 == "s":
+      print("draw")
+    elif player2 == "P" or player2 == "p":
+      print("Player 1 wins")
+      player1Score += 1
+    elif player2 == "R" or player2 == "r":
+      print("Player 2 wins")
+      player2Score += 1
+    else:
+      print("try again")
+  elif player1 == "P" or player1 == "p":
+    if player2 == "S" or player2 == "s":
+      print("Player 2 wins")
+      player2Score += 1
+    elif player2 == "P" or player2 == "p":
+      print("draw")
+    elif player2 == "R" or player2 == "r":
+      print("Player 1 wins")
+      player1Score += 1
+    else:
+      print("try again")
+  elif player1 == "R" or player1 == "r":
+    if player2 == "S" or player2 == "s":
+      print("Player 1 wins")
+      player1Score += 1
+    elif player2 == "P" or player2 == "p":
+      print("Player 2 wins")
+      player2Score += 1
+    elif player2 == "R" or player2 == "r":
+      print("draw")
+    else:
+      print("try again")
+
+  else:
+    print("invalid move, try again")
+  if player1Score == 3:
+    print("Player 1 wins, Player 1:", player1Score, "Player 2:", player2Score)
+    exit()
+  elif player2Score == 3:
+    print("Player 2 wins, Player 2:", player2Score, "Player 1:", player1Score)
+    exit() 
+    
+  else:
+    print("Go again")
+    print()
+    continue 
+    
